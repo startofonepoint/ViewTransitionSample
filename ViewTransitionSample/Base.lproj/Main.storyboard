@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ViewTransitionSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,108 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sia-d8-HQD">
+                                <rect key="frame" x="16" y="47" width="105" height="30"/>
+                                <state key="normal" title="Curl Down">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="curlDown:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MwM-fj-TyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-du-Abb">
+                                <rect key="frame" x="16" y="117" width="105" height="30"/>
+                                <state key="normal" title="Flip From Top">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipFromTop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BeC-AH-46p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyZ-9l-epZ">
+                                <rect key="frame" x="16" y="480" width="105" height="30"/>
+                                <state key="normal" title="Flip From Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipFromRight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7sr-oE-E7H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfL-Al-jix">
+                                <rect key="frame" x="464" y="47" width="120" height="30"/>
+                                <state key="normal" title="Curl Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="curlUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zyb-wf-2nj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PE-GE-2JQ">
+                                <rect key="frame" x="464" y="117" width="120" height="30"/>
+                                <state key="normal" title="Flip From Bottom">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipFromBottom:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gAu-zK-GsK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ge-aq-78M">
+                                <rect key="frame" x="464" y="480" width="120" height="30"/>
+                                <state key="normal" title="Flip From Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipFromLeft:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T8v-XJ-Ody"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4D-91-15h">
+                                <rect key="frame" x="464" y="550" width="120" height="30"/>
+                                <state key="normal" title="No Transition">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="noTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Rua-25-mMC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCD-r2-7Bh">
+                                <rect key="frame" x="16" y="550" width="105" height="30"/>
+                                <state key="normal" title="Dissolve">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dissolve:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ejk-No-rxI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="A4D-91-15h" secondAttribute="width" id="6l8-Zz-GKU"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="leading" secondItem="GDP-du-Abb" secondAttribute="leading" id="6sI-mS-OYH"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="width" secondItem="eyZ-9l-epZ" secondAttribute="width" id="7oy-x6-4E7"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="A4D-91-15h" secondAttribute="width" id="BlS-pe-13b"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="top" secondItem="eyZ-9l-epZ" secondAttribute="bottom" constant="40" id="Bun-Zi-oWJ"/>
+                            <constraint firstItem="GDP-du-Abb" firstAttribute="top" secondItem="sia-d8-HQD" secondAttribute="bottom" constant="40" id="FtJ-Ct-rg3"/>
+                            <constraint firstItem="A4D-91-15h" firstAttribute="top" secondItem="RCD-r2-7Bh" secondAttribute="top" id="Izc-Qj-iYF"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="leading" secondItem="sia-d8-HQD" secondAttribute="leading" id="J18-0H-2vb"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="YfL-Al-jix" secondAttribute="width" id="JCS-Ju-pCR"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="top" secondItem="eyZ-9l-epZ" secondAttribute="top" id="LVr-wj-c2Y"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="width" secondItem="sia-d8-HQD" secondAttribute="width" id="Pq1-BU-pZJ"/>
+                            <constraint firstItem="YfL-Al-jix" firstAttribute="trailing" secondItem="2Ge-aq-78M" secondAttribute="trailing" id="R7Z-df-1yh"/>
+                            <constraint firstItem="YfL-Al-jix" firstAttribute="trailing" secondItem="A4D-91-15h" secondAttribute="trailing" id="UIg-yb-ulA"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="leading" secondItem="eyZ-9l-epZ" secondAttribute="leading" id="Xxx-gM-GsB"/>
+                            <constraint firstAttribute="bottom" secondItem="RCD-r2-7Bh" secondAttribute="bottom" constant="20" id="Y8I-VJ-XnM"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="YfL-Al-jix" secondAttribute="width" id="aHC-5F-noA"/>
+                            <constraint firstItem="sia-d8-HQD" firstAttribute="top" secondItem="YfL-Al-jix" secondAttribute="top" id="h25-C1-ThH"/>
+                            <constraint firstAttribute="trailing" secondItem="YfL-Al-jix" secondAttribute="trailing" constant="16" id="iKo-gF-2lO"/>
+                            <constraint firstItem="sia-d8-HQD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="mqm-Tt-wpX"/>
+                            <constraint firstItem="YfL-Al-jix" firstAttribute="trailing" secondItem="0PE-GE-2JQ" secondAttribute="trailing" id="qi5-8B-IuB"/>
+                            <constraint firstItem="sia-d8-HQD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="47" id="sDG-dr-v5k"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="0PE-GE-2JQ" secondAttribute="width" id="upT-cn-StM"/>
+                            <constraint firstItem="GDP-du-Abb" firstAttribute="top" secondItem="0PE-GE-2JQ" secondAttribute="top" id="wMc-Xb-Jmq"/>
+                            <constraint firstItem="RCD-r2-7Bh" firstAttribute="width" secondItem="GDP-du-Abb" secondAttribute="width" id="yE0-5k-Zth"/>
+                            <constraint firstItem="2Ge-aq-78M" firstAttribute="width" secondItem="0PE-GE-2JQ" secondAttribute="width" id="zyv-F6-Hgt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
